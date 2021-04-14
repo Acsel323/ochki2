@@ -1,0 +1,18 @@
+
+body {
+  width: 1280px;
+  margin: 0 auto;
+  background: #F7EFE2;
+  height: 800px;
+  display: block;
+  position: absolute;
+}
+.ochki {
+  background: url("images/ochki1.svg");
+  position: relative;
+  margin-left: 25%;
+  margin-top: 246px;
+  height: 290px;
+  width: 630px;
+  background-repeat: no-repeat;
+}
