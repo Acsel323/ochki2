@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Галлюцинирующие очки</title>
+    <style media="screen">
+      body::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        /* background: url('images/m1280.png'); */
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        /* height: 100%; */
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: .5;
+      }
+      .ochki {
+        background: url("images/ochki1.svg");
+        position: relative;
+        margin-left: 25%;
+        margin-top: 246px;
+        height: 290px;
+        width: 630px;
+        background-repeat: no-repeat;
+      }
+      .palka1 {
+        background: url("images/palka.svg");
+        position: relative;
+        width: 210px;
+        height: 45px;
+        margin-left: 71%;
+        margin-top: -256px;
+        background-repeat: no-repeat;
+
+      }
+      .rotate {
+        transform: rotate(45deg);
+      }
+      .krug1 {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-left: 1110px;
+        margin-top: -100px;
+        border: 5px solid #000000
+      }
+      .palka2 {
+        background: url("images/palka.svg");
+        position: relative;
+        width: 210px;
+        height: 45px;
+        margin-left: 160px;
+        margin-top: 140px;
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+      }
+      .krug2 {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-left: 54px;
+        margin-top: -56px;
+        border: 5px solid #000000
+      }
+      .plus1 {
+        background: url("images/plus.svg");
+        position: relative;
+        margin: auto;
+        margin-top: 30%;
+        width: 42px;
+        height: 42px;
+      }
+      .plus2 {
+        background: url("images/plus.svg");
+        position: relative;
+        margin: auto;
+        margin-top: 30%;
+        width: 42px;
+        height: 42px;
+      }
+      .color {
+        position: relative;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        border: 5px solid #000000;
+        display: none;
+
+      }
+      .red{
+        background-color: #DC0000;
+        margin-left: 91.5%;
+        margin-top: -230px;
+      }
+      .blue {
+          background-color: #003EDC;
+          margin-left: 89.5%;
+          margin-top: 8px;
+      }
+      .yellow{
+        background-color: #FFE926;
+        margin-left: 84%;
+        margin-top: 3px;
+      }
+      .nohidden {
+        display: block;
+      }
+      .form1 {
+        position: relative;
+        height: 80px;
+        width: 80px;
+        margin-left: 24px;
+        margin-top: -210px;
+        border-radius: 50%;
+        border: 5px solid #000000;
+      }
+      .form2 {
+        position: relative;
+        height: 80px;
+        width: 80px;
+        margin-left: 47px;
+        margin-top: -197px;
+        border-radius: 50%;
+        border: 5px solid #000000;
+      }
+      .form3 {
+        position: relative;
+        height: 80px;
+        width: 80px;
+        margin-left: 110px;
+        margin-top: -175px;
+        border-radius: 50%;
+        border: 5px solid #000000;
+      }
+      .treug {
+        position: relative;
+        background: url("images/treug");
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $(".krug1").click(function(){
+    $(".plus1").toggleClass("rotate");
+    });
+    });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $(".krug1").click(function(){
+    $(".color").toggleClass("nohidden");
+    });
+    });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $(".krug2").click(function(){
+        $(".plus2").toggleClass("rotate");
+        $(".form1, .form2, .form3").toggleClass("hidden");
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <div class="ochki"></div>
+    <div class="palka1"></div>
+    <div class="krug1">
+      <div class="plus1"></div>
+    </div>
+    <div class="palka2"></div>
+    <div class="krug2">
+      <div class="plus2"></div>
+    </div>
+    <div class="color red"></div>
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+      <div class="form1 hidden">
+        <div class="treug"></div>
+      </div>
+      <div class="form2 hidden">
+        <div class="kvad"></div>
+      </div>
+      <div class="form3 hidden">
+        <div class="zvezda"></div>
+      </div>
+  </body>
+</html>
