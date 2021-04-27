@@ -12,7 +12,7 @@
         left: 0;
         top: 0;
         right: 0;
-        /* background: url('images/m1280.png'); */
+        background: url('images/m1280.png');
         background-size: 100% auto;
         background-repeat: no-repeat;
         /* height: 100%; */
@@ -23,20 +23,20 @@
       }
       .ochki {
         background: url("images/ochki1.svg");
-        position: relative;
-        margin-left: 25%;
-        margin-top: 246px;
+        position: absolute;
+        top: 0px;
+        left: 0%;
         height: 290px;
         width: 630px;
         background-repeat: no-repeat;
       }
       .palka1 {
         background: url("images/palka.svg");
-        position: relative;
+        position: absolute;
         width: 210px;
         height: 45px;
-        margin-left: 71%;
-        margin-top: -256px;
+        left: 71%;
+        top: 278px;
         background-repeat: no-repeat;
 
       }
@@ -44,31 +44,31 @@
         transform: rotate(45deg);
       }
       .krug1 {
-        position: relative;
+        position: absolute;
         height: 100px;
         width: 100px;
         border-radius: 50%;
-        margin-left: 1110px;
-        margin-top: -100px;
+        left: 87%;
+        top: 225px;
         border: 5px solid #000000
       }
       .palka2 {
         background: url("images/palka.svg");
-        position: relative;
+        position: absolute;
         width: 210px;
         height: 45px;
-        margin-left: 160px;
-        margin-top: 143px;
+        left: 12%;
+        top: 477px;
         background-repeat: no-repeat;
         transform: rotate(180deg);
       }
       .krug2 {
-        position: relative;
+        position: absolute;
         height: 100px;
         width: 100px;
         border-radius: 50%;
-        margin-left: 54px;
-        margin-top: -56px;
+        left: 4%;
+        top: 464px;
         border: 5px solid #000000
       }
       .plus1 {
@@ -88,7 +88,7 @@
         height: 42px;
       }
       .color {
-        position: relative;
+        position: absolute;
         height: 80px;
         width: 80px;
         border-radius: 50%;
@@ -98,55 +98,61 @@
       }
       .red{
         background-color: #DC0000;
-        margin-left: 91.5%;
-        margin-top: -230px;
+        left: 91.5%;
+        top: 340px;
       }
       .blue {
           background-color: #003EDC;
-          margin-left: 89.5%;
-          margin-top: 18px;
+          left: 89.5%;
+          top: 450px;
       }
       .yellow{
         background-color: #FFE926;
-        margin-left: 84%;
-        margin-top: 3px;
+        left: 84%;
+        top: 530px;
       }
       .nohidden {
         display: block;
       }
       .form1 {
-        position: relative;
+        position: absolute;
         height: 80px;
         width: 80px;
-        margin-left: 24px;
-        margin-top: -210px;
+        left: 24px;
+        top: 360px;
         border-radius: 50%;
         border: 5px solid #000000;
       }
       .form2 {
-        position: relative;
+        position: absolute;
         height: 80px;
         width: 80px;
-        margin-left: 47px;
-        margin-top: -197px;
+        left: 47px;
+        top: 260px;
         border-radius: 50%;
         border: 5px solid #000000;
       }
       .form3 {
-        position: relative;
+        position: absolute;
         height: 80px;
         width: 80px;
-        margin-left: 110px;
-        margin-top: -175px;
+        left: 110px;
+        top: 175px;
         border-radius: 50%;
         border: 5px solid #000000;
       }
       .treug {
-        position: relative;
+        position: absolute;
         background: url("images/treug");
       }
       .hidden {
         display: none;
+      }
+      .black {
+        background-color: black;
+      }
+      .ochki2 {
+        background: url("images/ochki2")
       }
     </style>
     <script type="text/javascript">
@@ -154,7 +160,6 @@
     $(".krug1").click(function(){
     $(".plus1").toggleClass("rotate");
     $(".color").toggleClass("nohidden");
-
     });
     });
     </script>
@@ -164,6 +169,15 @@
       $(".krug2").click(function(){
         $(".plus2").toggleClass("rotate");
         $(".form1, .form2, .form3").toggleClass("hidden");
+      });
+    });
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $(".red").click(function(){
+        $(".ochki").addClass("ochki2");
+        $(".red").toggleClass("black");
       });
     });
     </script>
