@@ -12,7 +12,7 @@
         left: 0;
         top: 0;
         right: 0;
-        background: url('images/m1280.png');
+        /* background: url('images/m1280.png'); */
         background-size: 100% auto;
         background-repeat: no-repeat;
         /* height: 100%; */
@@ -20,6 +20,17 @@
         height: 100%;
         display: block;
         opacity: .5;
+      }
+      .redoch {
+        background: url("images/kroch.png");
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        top: 390px;
+        height: 290px;
+        width: 630px;
+        background-repeat: no-repeat;
       }
       .ochki {
         background: url("images/ochki1.svg");
@@ -161,51 +172,35 @@
     $(".plus1").toggleClass("rotate");
     $(".color").toggleClass("nohidden");
     });
+    $(".krug2").click(function(){
+      $(".plus2").toggleClass("rotate");
+      $(".form1, .form2, .form3").toggleClass("hidden");
     });
-    </script>
-
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $(".krug2").click(function(){
-        $(".plus2").toggleClass("rotate");
-        $(".form1, .form2, .form3").toggleClass("hidden");
-      });
+    $(".red").click(function(){
+      $(".red").toggleClass("black");
+      $(".color").removeClass("nohidden");
     });
-    </script>
-
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $(".red").click(function(){
-        // $(".ochki").addClass("ochki2");
-        $(".red").toggleClass("black");
-        $(".color").removeClass("nohidden");
-
-      });
+    $(".blue").click(function(){
+      $(".blue").toggleClass("black");
+      $(".color").removeClass("nohidden");
     });
-    </script>
-
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $(".blue").click(function(){
-        // $(".ochki").addClass("ochki3");
-        $(".blue").toggleClass("black");
-        $(".color").removeClass("nohidden");
-      });
+    $(".yellow").click(function(){
+      $(".yellow").toggleClass("black");
+      $(".color").removeClass("nohidden");
     });
-    </script>
-
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $(".yellow").click(function(){
-        // $(".ochki").addClass("ochki4");
-        $(".yellow").toggleClass("black");
-        $(".color").removeClass("nohidden");
-      });
+    $(".red").click(function(){
+      $(".ochki").AddClass("redoch");
+      // $(".color").toggleClass("nohidden");
+    });
+    $(".red").click(function(){
+      $(".ochki").removeClass("ochki");
+    });
     });
     </script>
   </head>
   <body>
     <div class="ochki"></div>
+    <!-- <div class="redoch"></div> -->
     <div class="palka1"></div>
     <div class="krug1">
       <div class="plus1"></div>
